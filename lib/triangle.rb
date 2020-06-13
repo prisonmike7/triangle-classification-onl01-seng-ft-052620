@@ -8,13 +8,13 @@ class Triangle
   end
 
   def kind
-
+    if 
   end
 
   def valid?
-    if a <= 0 || b <= 0 || c <= 0
+    if @a <= 0 || @b <= 0 || @c <= 0
       return false
-    elsif a + b < c || b + c < a || a + c < b
+    elsif @a + @b < @c || @b + @c < @a || @a + @c < @b
       return false
     else
       return true
