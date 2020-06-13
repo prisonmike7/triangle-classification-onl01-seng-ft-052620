@@ -9,7 +9,7 @@ class Triangle
 
   def kind
     if valid?
-      if @a != @b || @b != @c || @a != @c
+      if @a != @b && @b != @c && @a != @c
         return :scalene
       elsif (@a == @b && @a != @c) || (@b == @c && @b != @a) || (@a == @c && @a != @b)
         return :isosceles
