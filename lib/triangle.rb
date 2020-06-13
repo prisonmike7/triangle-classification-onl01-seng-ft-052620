@@ -16,7 +16,9 @@ class Triangle
       elsif @a == @b && @b == @c && @a == @c
         return :equilateral
       end
-
+    else
+      raise TriangleError
+    end
   end
 
   def valid?
