@@ -1,5 +1,5 @@
 class Triangle
-  attr_accessor :a, :b, :c
+  attr_accessor :a, :b, :c, :type
 
   def initialize(a, b ,c)
     @a = a
@@ -8,7 +8,14 @@ class Triangle
   end
 
   def kind
-    if 
+    if valid?
+      if @a != @b || @b != @c || @a != @c
+        return :scalene
+      elsif (@a == @b && @a != @c) || (@b == @c && @b != @a) || (@a == @c && @a != @b)
+        return :isosceles
+      elsif @a == @b && @b == @c && @a == @c
+        return :equilateral
+
   end
 
   def valid?
